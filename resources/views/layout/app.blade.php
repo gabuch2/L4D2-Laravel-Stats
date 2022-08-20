@@ -9,7 +9,7 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="{{asset('vendor/BootStrap/css/bootstrap.min.css')}}" rel="stylesheet" />
-        <link href="{{asset('vendor/DataTables/css/datatables.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('vendor/DataTables-1.12.1/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
         <link href="http://fonts.cdnfonts.com/css/dot-matrix" rel="stylesheet">
         <style>
             /* hack, I can't use blade functions in css files */
