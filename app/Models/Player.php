@@ -22,7 +22,7 @@ class Player extends Model
             if(env('STATS_REQUIRE_ONLINE_DAYS', 0) > 0)
                 $builder = $builder->whereRaw(sprintf('FROM_UNIXTIME(lastontime) > now() - INTERVAL %d day', env('STATS_REQUIRE_ONLINE_DAYS', 0)));
 
-            $builder = $builder->where('playtime', '>=', env('STATS_MININUM_PLAYTIME', 0));
+            $builder = $builder->where('playtime', '>=', env('STATS_MININUM_PLAYTIME', 0))->where('steamid', '!=', "STEAM_ID_STOP_IGNORING_RETVALS");
 
             return $builder;
         });
