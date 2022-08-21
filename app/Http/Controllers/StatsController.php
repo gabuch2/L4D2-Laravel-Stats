@@ -195,7 +195,7 @@ class StatsController extends Controller
                                     'players.lastontime', 
                                     DB::raw('(SELECT count(DISTINCT b.points)+1 FROM players AS b WHERE b.points > players.points) AS position')
                                 ])
-                            ->where('lastontime', '>', Carbon::now()->subMinutes(10)->toDateTimeString())
+                            ->where('lastontime', '>', Carbon::now()->subMinutes(10)->timestamp)
                             ->orderBy('points', 'DESC')
                             ->get();
 
